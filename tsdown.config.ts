@@ -27,29 +27,21 @@ export default [
     dts: false,
     sourcemap: true,
     clean: false,
-    external: [
-      'react',
-      'react-dom',
-      'react-dom/client',
-      'cordis',
-      '@deepseek-ai/dsh-client-ui-slots',
-      '@deepseek-ai/dsh-client-runtime/client',
-    ],
-    inputOptions: {
-      resolve: {
-        conditionNames: ['browser', 'import', 'require', 'default'],
-      },
-    },
-    noExternal: (id) => (
-      [
+    deps: {
+      neverBundle: [
         'react',
         'react-dom',
         'react-dom/client',
         'cordis',
         '@deepseek-ai/dsh-client-ui-slots',
         '@deepseek-ai/dsh-client-runtime/client',
-      ].includes(id) ? undefined : true
-    ),
+      ],
+    },
+    inputOptions: {
+      resolve: {
+        conditionNames: ['browser', 'import', 'require', 'default'],
+      },
+    },
     outputOptions: {
       entryFileNames: 'client.js',
       banner: 'window.__ModuleLoader__.load({ id: "dsh-desktop-shortcut", factory: (require) => {',
