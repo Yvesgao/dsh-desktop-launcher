@@ -1,5 +1,5 @@
 /**
- * tsdown build for dsh-desktop-shortcut.
+ * tsdown build for dsh-desktop-launcher.
  *
  * - Host half: compiled by `tsc -p tsconfig.build.json` into `lib/`.
  * - Client half: this config bundles `src/client/index.ts` into
@@ -8,7 +8,7 @@
  *   preset (packages/client/tsdown.client.ts):
  *
  *     window.__ModuleLoader__.load({
- *       id: "dsh-desktop-shortcut",
+ *       id: "dsh-desktop-launcher",
  *       factory: (require) => { ... return module.exports; }
  *     });
  *
@@ -44,7 +44,7 @@ export default [
     },
     outputOptions: {
       entryFileNames: 'client.js',
-      banner: 'window.__ModuleLoader__.load({ id: "dsh-desktop-shortcut", factory: (require) => {',
+      banner: 'window.__ModuleLoader__.load({ id: "dsh-desktop-launcher", factory: (require) => {',
       intro: 'var module = { exports: {} }; var exports = module.exports;',
       footer: 'return module.exports; } });',
       codeSplitting: false,
