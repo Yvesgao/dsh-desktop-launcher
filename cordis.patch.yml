@@ -1,8 +1,8 @@
-# dsh-desktop-shortcut bundle patch
+# dsh-desktop-launcher bundle patch
 #
 # `dsh.bundle.patch` layer of the published npm package. When installed via
 #
-#   dsh plugin --profile <name> add dsh-desktop-shortcut
+#   dsh plugin --profile <name> add dsh-desktop-launcher
 #
 # the CLI reconciles installed packages against this declaration and appends
 # the plugin to the profile bundle stack; the profile boot then merges THIS
@@ -10,4 +10,4 @@
 # cordis.patch.yml mount line. No profile file edits needed.
 - insert:
     - id: desktop-shortcut
-      name: 'dsh-desktop-shortcut'
+      name: 'dsh-desktop-launcher'
