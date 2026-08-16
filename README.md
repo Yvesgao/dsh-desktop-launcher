@@ -1,4 +1,4 @@
-<h1 align="center">dsh-desktop-shortcut</h1>
+<h1 align="center">dsh-desktop-launcher</h1>
 
 <p align="center">在 DSH 设置页一键创建 Windows 桌面快捷方式 —— 把任意本地服务（DeepSeek Harness、开发服务器、npx 工具）变成双击启动的桌面图标，自动打开浏览器，还能固定到任务栏。</p>
 
@@ -25,10 +25,10 @@
 
 ```sh
 # git 源（lib/ 已入库）
-dsh plugin --profile web add github:Yvesgao/dsh-desktop-shortcut#main
+dsh plugin --profile web add github:Yvesgao/dsh-desktop-launcher#main
 
 # 或 npm
-dsh plugin --profile web add dsh-desktop-shortcut
+dsh plugin --profile web add dsh-desktop-launcher
 ```
 
 重启 web（`dsh web`）后，打开 **设置 → Desktop Shortcut**，填好表单点 **Create desktop shortcut** 即可。
@@ -90,10 +90,10 @@ The heavy lifting is done by the bundled, self-contained `assets/New-DesktopShor
 
 ```sh
 # from a git repo (lib/ committed)
-dsh plugin --profile web add github:Yvesgao/dsh-desktop-shortcut#main
+dsh plugin --profile web add github:Yvesgao/dsh-desktop-launcher#main
 
 # or from npm
-dsh plugin --profile web add dsh-desktop-shortcut
+dsh plugin --profile web add dsh-desktop-launcher
 ```
 
 Restart the web UI (`dsh web`). Then open **Settings → Desktop Shortcut**, fill the form and click **Create desktop shortcut**.
