@@ -1,11 +1,11 @@
 {
-  "name": "dsh-desktop-shortcut",
+  "name": "dsh-desktop-launcher",
   "version": "0.1.0",
   "description": "DSH web plugin: create a one-click Windows desktop shortcut (launcher .cmd + auto browser open + taskbar pin hint) for DeepSeek Harness or any local server, right from the Settings page.",
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Yvesgao/dsh-desktop-shortcut.git"
+    "url": "git+https://github.com/Yvesgao/dsh-desktop-launcher.git"
   },
   "publishConfig": {
     "access": "public"
