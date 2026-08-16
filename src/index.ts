@@ -1,5 +1,5 @@
 /**
- * dsh-desktop-shortcut host half.
+ * dsh-desktop-launcher host half.
  *
  * Serves a small JSON API under `/plugins/desktop-shortcut/api`:
  *
@@ -19,7 +19,7 @@ import type { Context } from './context-types.ts'
 import { isLoopbackRequest, readJsonBody, writeError, writeJson, writeOk } from './wire.ts'
 
 /** Plugin identity for cordis.yml rows / the bundle stack. */
-export const name = 'dsh-desktop-shortcut'
+export const name = 'dsh-desktop-launcher'
 
 /** Services required before mounting. */
 export const inject = ['webServer']
@@ -112,5 +112,5 @@ export function apply(ctx: Context): void {
         }, 500)
       }
     },
-  }), 'dsh-desktop-shortcut: json api')
+  }), 'dsh-desktop-launcher: json api')
 }
