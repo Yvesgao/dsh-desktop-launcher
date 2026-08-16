@@ -2,6 +2,8 @@
 
 <p align="center">在 DSH 设置页一键创建 Windows 桌面快捷方式 —— 把任意本地服务（DeepSeek Harness、开发服务器、npx 工具）变成双击启动的桌面图标，自动打开浏览器，还能固定到任务栏。</p>
 
+<p align="center"><img src="docs/hero.svg" alt="dsh-desktop-launcher" width="100%"/></p>
+
 ## 功能
 
 把「打开 PowerShell → 敲命令 → 再开浏览器」变成双击一下。在 **设置 → Desktop Shortcut** 里填一个小表单，插件自动完成：
