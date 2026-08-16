@@ -1,5 +1,5 @@
 /**
- * dsh-desktop-shortcut client half.
+ * dsh-desktop-launcher client half.
  *
  * Contributes the "Desktop Shortcut" section to the DSH Settings shell and
  * talks to the host JSON API (`/plugins/desktop-shortcut/api`) with plain
