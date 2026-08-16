@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs" xmlns:util="http://wixtoolset.org/schemas/v4/wxs/util">
+  <Package Name="DeepSeek Harness" Manufacturer="dsh-desktop-launcher" Version="0.1.0" UpgradeCode="476216DF-C4D6-4524-A628-95006229958B" Scope="perMachine" Language="1033">
+    <MajorUpgrade DowngradeErrorMessage="A newer version of DeepSeek Harness is already installed." />
+    <MediaTemplate EmbedCab="yes" />
+    <StandardDirectory Id="ProgramFiles64Folder">
+      <Directory Id="INSTALLDIR" Name="DeepSeek Harness">
+        <Directory Id="D__engine" Name="engine" />
+        <Directory Id="D__plugin" Name="plugin" />
+        <Directory Id="D__plugin_assets" Name="assets" />
+        <Directory Id="D__plugin_lib" Name="lib" />
+        <Directory Id="D__plugin_lib_client" Name="client" />
+      </Directory>
+    </StandardDirectory>
+    <StandardDirectory Id="ProgramMenuFolder">
+      <Directory Id="ProgramMenuDir" Name="DeepSeek Harness" />
+    </StandardDirectory>
+    <Feature Id="Main" Title="DeepSeek Harness" Level="1">
+      <ComponentGroupRef Id="PayloadFiles" />
+      <ComponentGroupRef Id="StartMenuFiles" />
+    </Feature>
+    <ComponentGroup Id="PayloadFiles">
+      <ComponentRef Id="C_" />
+      <ComponentRef Id="C__engine" />
+      <ComponentRef Id="C__plugin" />
+      <ComponentRef Id="C__plugin_assets" />
+      <ComponentRef Id="C__plugin_lib" />
+      <ComponentRef Id="C__plugin_lib_client" />
+    </ComponentGroup>
+    <ComponentGroup Id="StartMenuFiles">
+      <ComponentRef Id="StartMenuShortcut" />
+    </ComponentGroup>
+    <DirectoryRef Id="INSTALLDIR">
+      <Component Id="C_" Guid="767947FF-284E-4798-9DAD-73282C61D933">
+        <File Id="F_0" Source="payload\DeepSeek Harness.cmd" KeyPath="yes" />
+        <File Id="F_1" Source="payload\Setup-DeepSeekHarness.ps1" />
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="D__engine">
+      <Component Id="C__engine" Guid="1A32497A-D310-4DD3-9A7F-2ED608CA249C">
+        <File Id="F_2" Source="payload\engine\New-DesktopShortcut.ps1" KeyPath="yes" />
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="D__plugin">
+      <Component Id="C__plugin" Guid="EDA8A138-0342-4638-A089-50219320A9F5">
+        <File Id="F_3" Source="payload\plugin\cordis.patch.yml" KeyPath="yes" />
+        <File Id="F_4" Source="payload\plugin\LICENSE" />
+        <File Id="F_5" Source="payload\plugin\package.json" />
+        <File Id="F_6" Source="payload\plugin\README.md" />
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="D__plugin_assets">
+      <Component Id="C__plugin_assets" Guid="FFDB8531-B319-41FA-AC83-BCDCFAEC53B4">
+        <File Id="F_7" Source="payload\plugin\assets\New-DesktopShortcut.ps1" KeyPath="yes" />
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="D__plugin_lib">
+      <Component Id="C__plugin_lib" Guid="64A2D847-8060-4DA1-AA1D-79CE52BB9EBC">
+        <File Id="F_8" Source="payload\plugin\lib\client.js" KeyPath="yes" />
+        <File Id="F_9" Source="payload\plugin\lib\client.js.map" />
+        <File Id="F_10" Source="payload\plugin\lib\context-types.d.ts" />
+        <File Id="F_11" Source="payload\plugin\lib\context-types.d.ts.map" />
+        <File Id="F_12" Source="payload\plugin\lib\context-types.js" />
+        <File Id="F_13" Source="payload\plugin\lib\context-types.js.map" />
+        <File Id="F_14" Source="payload\plugin\lib\index.d.ts" />
+        <File Id="F_15" Source="payload\plugin\lib\index.d.ts.map" />
+        <File Id="F_16" Source="payload\plugin\lib\index.js" />
+        <File Id="F_17" Source="payload\plugin\lib\index.js.map" />
+        <File Id="F_18" Source="payload\plugin\lib\wire.d.ts" />
+        <File Id="F_19" Source="payload\plugin\lib\wire.d.ts.map" />
+        <File Id="F_20" Source="payload\plugin\lib\wire.js" />
+        <File Id="F_21" Source="payload\plugin\lib\wire.js.map" />
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="D__plugin_lib_client">
+      <Component Id="C__plugin_lib_client" Guid="EB4EC6C0-953F-41E5-A02F-63F26703A0E5">
+        <File Id="F_22" Source="payload\plugin\lib\client\index.d.ts" KeyPath="yes" />
+        <File Id="F_23" Source="payload\plugin\lib\client\index.d.ts.map" />
+        <File Id="F_24" Source="payload\plugin\lib\client\index.js" />
+        <File Id="F_25" Source="payload\plugin\lib\client\index.js.map" />
+        <File Id="F_26" Source="payload\plugin\lib\client\section.d.ts" />
+        <File Id="F_27" Source="payload\plugin\lib\client\section.d.ts.map" />
+        <File Id="F_28" Source="payload\plugin\lib\client\section.js" />
+        <File Id="F_29" Source="payload\plugin\lib\client\section.js.map" />
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="ProgramMenuDir">
+      <Component Id="StartMenuShortcut" Guid="A3AFB572-0994-4867-9FBB-F45C1DAB6764">
+        <Shortcut Id="StartMenuShortcutLnk" Name="DeepSeek Harness" Description="Launch DeepSeek Harness web UI" Target="[INSTALLDIR]DeepSeek Harness.cmd" WorkingDirectory="INSTALLDIR" />
+        <RemoveFolder Id="RemoveProgramMenuDir" On="uninstall" />
+        <RegistryValue Root="HKCU" Key="Software\DeepSeekHarness" Name="installed" Type="integer" Value="1" KeyPath="yes" />
+      </Component>
+    </DirectoryRef>
+    <CustomAction Id="CA_SetSetupData" Property="CA_RunSetup" Value="&quot;[SystemFolder]WindowsPowerShell\v1.0\powershell.exe&quot; -NoProfile -ExecutionPolicy Bypass -File &quot;[INSTALLDIR]Setup-DeepSeekHarness.ps1&quot; -InstallDir &quot;[INSTALLDIR]&quot; -LogFile &quot;[%TEMP]\dsh-setup.log&quot;" />
+    <CustomAction Id="CA_RunSetup" BinaryRef="WixCA" DllEntry="WixQuietExec" Execute="deferred" Impersonate="yes" Return="check" />
+    <InstallExecuteSequence>
+      <Custom Action="CA_SetSetupData" After="InstallFiles" />
+      <Custom Action="CA_RunSetup" After="CA_SetSetupData" Condition="NOT Installed" />
+    </InstallExecuteSequence>
+  </Package>
+</Wix>
+

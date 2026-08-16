@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs" xmlns:bal="http://wixtoolset.org/schemas/v4/wxs/bal" xmlns:util="http://wixtoolset.org/schemas/v4/wxs/util">
+  <Bundle Name="DeepSeek Harness Setup" Version="0.1.0" Manufacturer="dsh-desktop-launcher" UpgradeCode="D153808E-EA98-45AC-AFCF-1E9C396D768E">
+    <BootstrapperApplication>
+      <bal:WixStandardBootstrapperApplication Theme="rtfLicense" LicenseFile="license.rtf" />
+    </BootstrapperApplication>
+    <util:RegistrySearch Id="NodeDetect" Root="HKLM" Key="SOFTWARE\Node.js" Variable="NodeDetected" />
+    <Chain>
+      <MsiPackage SourceFile="downloads\node-v24.19.0-x64.msi" Vital="yes" Permanent="yes" />
+      <MsiPackage SourceFile="DeepSeekHarnessSetup.msi" Vital="yes" />
+    </Chain>
+  </Bundle>
+</Wix>

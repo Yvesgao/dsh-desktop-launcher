@@ -1,0 +1,5 @@
+﻿<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs" xmlns:util="http://wixtoolset.org/schemas/v4/wxs/util">
+  <Fragment>
+    <util:RegistrySearch Id="R1" Root="HKLM" Key="SOFTWARE\Node.js" Variable="NodeDetected" />
+  </Fragment>
+</Wix>
