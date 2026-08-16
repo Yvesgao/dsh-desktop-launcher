@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1536 640" width="1536" height="640" role="img" aria-label="dsh-desktop-launcher: one-click Windows desktop shortcut for DeepSeek Harness">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a0e17"/>
+      <stop offset="0.55" stop-color="#0e1424"/>
+      <stop offset="1" stop-color="#101631"/>
+    </linearGradient>
+    <radialGradient id="orbCyan" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#22d3ee" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="orbPurple" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#a78bfa" stop-opacity="0.26"/>
+      <stop offset="1" stop-color="#a78bfa" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="orbIndigo" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#6366f1" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#6366f1" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="iconGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#38bdf8"/>
+      <stop offset="1" stop-color="#6366f1"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#e2e8f0"/>
+      <stop offset="0.6" stop-color="#7dd3fc"/>
+      <stop offset="1" stop-color="#a78bfa"/>
+    </linearGradient>
+    <linearGradient id="bottomGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22d3ee"/>
+      <stop offset="0.5" stop-color="#a78bfa"/>
+      <stop offset="1" stop-color="#6366f1"/>
+    </linearGradient>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse">
+      <path d="M 36 0 L 0 0 0 36" fill="none" stroke="#ffffff" stroke-opacity="0.035" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- background -->
+  <rect width="1536" height="640" fill="url(#bg)"/>
+  <rect width="1536" height="640" fill="url(#grid)"/>
+  <circle cx="1180" cy="110" r="300" fill="url(#orbCyan)"/>
+  <circle cx="300" cy="580" r="320" fill="url(#orbPurple)"/>
+  <circle cx="180" cy="120" r="260" fill="url(#orbIndigo)"/>
+
+  <!-- left: copy -->
+  <g font-family="'Segoe UI', system-ui, -apple-system, 'Microsoft YaHei', sans-serif">
+    <!-- badge -->
+    <rect x="64" y="86" width="196" height="32" rx="16" fill="#1e293b" stroke="#22d3ee" stroke-opacity="0.45" stroke-width="1"/>
+    <text x="162" y="107" text-anchor="middle" font-size="13" letter-spacing="2.5" fill="#7dd3fc">DSH PLUGIN · WINDOWS</text>
+
+    <!-- title -->
+    <text x="64" y="180" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-weight="700" font-size="50" fill="url(#titleGrad)">dsh-desktop-launcher</text>
+
+    <!-- taglines -->
+    <text x="66" y="228" font-size="23" font-weight="600" fill="#cbd5e1">在 DSH 设置页一键创建 Windows 桌面快捷方式</text>
+    <text x="66" y="260" font-size="15" fill="#64748b">One-click desktop shortcut for DeepSeek Harness — auto browser open · taskbar pin</text>
+
+    <!-- feature chips -->
+    <g font-size="14" fill="#e2e8f0">
+      <rect x="64" y="296" width="118" height="34" rx="17" fill="#1e293b" stroke="#334155"/>
+      <text x="123" y="317" text-anchor="middle">.cmd 启动器</text>
+      <rect x="194" y="296" width="140" height="34" rx="17" fill="#1e293b" stroke="#334155"/>
+      <text x="264" y="317" text-anchor="middle">自动打开浏览器</text>
+      <rect x="346" y="296" width="118" height="34" rx="17" fill="#1e293b" stroke="#334155"/>
+      <text x="405" y="317" text-anchor="middle">任务栏固定</text>
+    </g>
+
+    <!-- install command -->
+    <rect x="64" y="372" width="600" height="68" rx="12" fill="#0a0f1c" stroke="#1e293b"/>
+    <circle cx="92" cy="406" r="5" fill="#22c55e"/>
+    <text x="112" y="413" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="16" fill="#7dd3fc">dsh plugin --profile web add dsh-desktop-launcher</text>
+    <text x="112" y="433" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="13" fill="#475569"># v0.1.0 · lib/ committed · one-line install</text>
+
+    <!-- hint -->
+    <text x="66" y="486" font-size="13" fill="#64748b">设置 → Desktop Shortcut → 填写表单 → 创建</text>
+  </g>
+
+  <!-- right: desktop mock -->
+  <g>
+    <!-- window -->
+    <rect x="720" y="92" width="540" height="392" rx="16" fill="#0d1322" stroke="#1f2937"/>
+    <rect x="720" y="92" width="540" height="46" rx="16" fill="#111a2e"/>
+    <rect x="720" y="120" width="540" height="18" fill="#111a2e"/>
+    <circle cx="744" cy="115" r="6" fill="#f87171"/>
+    <circle cx="766" cy="115" r="6" fill="#fbbf24"/>
+    <circle cx="788" cy="115" r="6" fill="#34d399"/>
+    <text x="990" y="120" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="13" fill="#94a3b8">DeepSeek Harness — Settings</text>
+
+    <!-- desktop area inside window -->
+    <rect x="720" y="138" width="540" height="346" fill="url(#bg)" opacity="0.6"/>
+    <rect x="720" y="138" width="540" height="346" fill="url(#grid)" opacity="0.7"/>
+
+    <!-- shortcut tile -->
+    <rect x="764" y="196" width="188" height="152" rx="14" fill="#0f172a" stroke="#243044"/>
+    <rect x="800" y="222" width="116" height="92" rx="18" fill="url(#iconGrad)"/>
+    <!-- arrow (shortcut) glyph -->
+    <g transform="translate(858,268)">
+      <path d="M -26 22 L 18 -22 M -10 -22 L 18 -22 L 18 6" fill="none" stroke="#ffffff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <text x="858" y="352" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="14" font-weight="600" fill="#e2e8f0">DeepSeek Harness.lnk</text>
+    <text x="858" y="374" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" fill="#64748b">双击启动 · 自动打开浏览器</text>
+    <!-- ok badge -->
+    <circle cx="944" cy="206" r="16" fill="#22c55e"/>
+    <path d="M 937 206 l 5 5 l 9 -10" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- terminal strip -->
+    <rect x="764" y="392" width="452" height="96" rx="10" fill="#020617" stroke="#1e293b"/>
+    <circle cx="784" cy="414" r="4" fill="#f87171"/>
+    <circle cx="798" cy="414" r="4" fill="#fbbf24"/>
+    <circle cx="812" cy="414" r="4" fill="#34d399"/>
+    <text x="784" y="450" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="14" fill="#94a3b8">$ dsh plugin --profile web add dsh-desktop-launcher</text>
+    <text x="784" y="474" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, monospace" font-size="14" fill="#22c55e">✓ bundle mounted · Settings → Desktop Shortcut</text>
+    <rect x="1068" y="442" width="8" height="16" fill="#7dd3fc"/>
+  </g>
+
+  <!-- bottom accent -->
+  <rect x="0" y="632" width="1536" height="8" fill="url(#bottomGrad)"/>
+</svg>
